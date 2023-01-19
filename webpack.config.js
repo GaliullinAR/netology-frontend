@@ -4,6 +4,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/index.js',
+  devServer: {
+    port: 7070,
+  },
+  devtool: 'inline-source-map',
   output: {
     path: path.resolve(__dirname, 'docs'), // каталог для результатов сборки
     filename: 'bundle.js',
@@ -34,6 +38,10 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         loader: 'file-loader',
+      },
+      {
+        test: /\.(svg|eot|woff|woff2|ttf)$/,
+        use: ['file-loader'],
       },
     ],
   },

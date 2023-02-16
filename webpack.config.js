@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   entry: './src/index.js',
   devServer: {
-    port: 7070,
+    port: 7076,
   },
   devtool: 'inline-source-map',
   output: {
@@ -37,11 +37,11 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        loader: 'file-loader',
+        type: 'asset/resource',
       },
       {
         test: /\.(svg|eot|woff|woff2|ttf)$/,
-        use: ['file-loader'],
+        type: 'asset/resource',
       },
     ],
   },

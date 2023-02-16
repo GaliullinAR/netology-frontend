@@ -8,9 +8,7 @@ const addTask = document.querySelector('.btn-add');
 const modalContainer = document.querySelector('.modal-container');
 
 document.addEventListener('DOMContentLoaded', () => {
-  const allTasks = serverResponse.getAll();
-
-  allTasks.then((data) => {
+  serverResponse.getAll().then((data) => {
     const showTask = new Task(serverResponse);
     showTask.addTaskInTable(data);
   });

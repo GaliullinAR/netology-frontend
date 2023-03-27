@@ -2,7 +2,7 @@ import Task from './Task';
 
 export default class Model {
   constructor() {
-    this.serverURL = 'https://localhost:7070/';
+    this.serverURL = 'http://localhost:7076/';
   }
 
   start() {

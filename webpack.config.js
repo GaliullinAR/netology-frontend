@@ -9,7 +9,7 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   output: {
-    path: path.resolve(__dirname, 'docs'), // каталог для результатов сборки
+    path: path.resolve(__dirname, 'dist'), // каталог для результатов сборки
     filename: 'bundle.js',
   },
   module: {

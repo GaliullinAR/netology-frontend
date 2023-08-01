@@ -1,4 +1,5 @@
-docs
+dist
 coverage
 Form.js
 Task.js
+node_modules
